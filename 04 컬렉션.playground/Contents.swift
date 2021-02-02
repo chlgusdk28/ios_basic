@@ -195,3 +195,36 @@ if let removeGenre = favoriteGenres.remove("Rock"){
 // 락 지워짐~~
 
 favoriteGenres
+
+// 숫자와 집합 계산할 때 유용하게 사용하는 Set
+
+let oddDigits : Set = [1,3,5,7,9]
+let evenDigits : Set = [0,2,4,6,8]
+let singleDigits : Set = [2,3,5,7]
+
+// 합집합
+oddDigits.union(evenDigits)
+oddDigits.union(evenDigits).sorted()
+
+//교집합
+oddDigits.intersection(evenDigits)
+oddDigits.intersection(singleDigits).sorted()
+
+//차집합
+oddDigits.subtracting(singleDigits)
+
+
+//여집합
+oddDigits.symmetricDifference(singleDigits).sorted()
+
+// Set의 멤버쉽과 동등 비교
+
+let houseAnimal : Set = ["개","고양이"]
+let farmAnimal : Set = ["소", "닭","양","개","고양이"]
+let cityAnimal : Set = ["오리", "토끼"]
+
+houseAnimal.isSubset(of: farmAnimal)
+farmAnimal.isSuperset(of: houseAnimal)
+// 팜 애니멀이 하우스 애니멀의 모집단인가? ( 하우스애니멀을 소속하고있는가)
+farmAnimal.isDisjoint(with: cityAnimal)
+// 완전 틀린 집단인가?
