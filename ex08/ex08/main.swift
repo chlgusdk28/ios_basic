@@ -19,4 +19,5 @@ func make(){
         arr1.append(inpNum1!)
     }
     print("최소값  : \(arr1.min()), 최대값 : \(arr1.max())" )
+    print("어딧냐 : \((arr1.index(of: arr1.max()!)!) + 1)")
 }
