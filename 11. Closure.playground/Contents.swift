@@ -63,3 +63,37 @@ func doubleValue2(input: Int?) -> Int?{
 }
 
 print(doubleValue2(input: 4)!)
+
+
+// Extension
+// 구조체, 클래스, 열거형, 프로토콜 타입에 새로운 기능을 추가할 수 있다.
+
+//Int에 extension을 적용하여 property 추가
+
+extension Int{
+    var isEven: Bool{
+        
+        return self % 2 == 0
+    }
+    var isOdd : Bool{
+        return self % 2 == 1
+    }
+}
+
+if 1.isEven == true {
+    print("짝수입니다.")
+}else{
+    print (" 홀수입니다")
+}
+
+
+var number: Int = 3
+number.isEven
+
+extension Int{
+    func muliply(by n : Int) -> Int {
+        return self * n
+    }
+}
+
+3.muliply(by: 2)
