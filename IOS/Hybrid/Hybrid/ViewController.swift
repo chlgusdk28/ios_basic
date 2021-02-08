@@ -64,12 +64,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     
     @IBAction func btnSite01(_ sender: UIButton) {
-        loadWebpage(url : "https://www.google.com")
+        loadWebpage(url : "http://54.180.159.210:8080/test/ResponseAge_01.jsp")
         myAvtivityIndicator.isHidden = true
     }
     
     @IBAction func btnSite02(_ sender: UIButton) {
-        loadWebpage(url : "https://www.daum.net")
+        loadWebpage(url : "http://localhost:8080/ex01/ResponseAge_02.jsp")
         myAvtivityIndicator.isHidden = true
     }
     
