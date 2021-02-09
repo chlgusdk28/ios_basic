@@ -13,6 +13,10 @@
 		3867D40625D233630018780F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3867D40425D233630018780F /* Main.storyboard */; };
 		3867D40825D233640018780F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3867D40725D233640018780F /* Assets.xcassets */; };
 		3867D40B25D233640018780F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3867D40925D233640018780F /* LaunchScreen.storyboard */; };
+		3867D41425D236AF0018780F /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867D41325D236AF0018780F /* EditViewController.swift */; };
+		3867D41B25D2373C0018780F /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3867D41825D2373C0018780F /* lamp_on.png */; };
+		3867D41C25D2373C0018780F /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3867D41925D2373C0018780F /* lamp_off.png */; };
+		3867D41D25D2373C0018780F /* lamp_remove.png in Resources */ = {isa = PBXBuildFile; fileRef = 3867D41A25D2373C0018780F /* lamp_remove.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3867D40725D233640018780F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3867D40A25D233640018780F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3867D40C25D233640018780F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3867D41325D236AF0018780F /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		3867D41825D2373C0018780F /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lamp_on.png; path = ../../../../Reference/lamp_on.png; sourceTree = "<group>"; };
+		3867D41925D2373C0018780F /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lamp_off.png; path = ../../../../Reference/lamp_off.png; sourceTree = "<group>"; };
+		3867D41A25D2373C0018780F /* lamp_remove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lamp_remove.png; path = ../../../../Reference/lamp_remove.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		3867D3FD25D233630018780F /* Navigate */ = {
 			isa = PBXGroup;
 			children = (
+				3867D41725D237300018780F /* images */,
 				3867D3FE25D233630018780F /* AppDelegate.swift */,
 				3867D40025D233630018780F /* SceneDelegate.swift */,
 				3867D40225D233630018780F /* ViewController.swift */,
+				3867D41325D236AF0018780F /* EditViewController.swift */,
 				3867D40425D233630018780F /* Main.storyboard */,
 				3867D40725D233640018780F /* Assets.xcassets */,
 				3867D40925D233640018780F /* LaunchScreen.storyboard */,
 				3867D40C25D233640018780F /* Info.plist */,
 			);
 			path = Navigate;
+			sourceTree = "<group>";
+		};
+		3867D41725D237300018780F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3867D41925D2373C0018780F /* lamp_off.png */,
+				3867D41825D2373C0018780F /* lamp_on.png */,
+				3867D41A25D2373C0018780F /* lamp_remove.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3867D41B25D2373C0018780F /* lamp_on.png in Resources */,
+				3867D41D25D2373C0018780F /* lamp_remove.png in Resources */,
 				3867D40B25D233640018780F /* LaunchScreen.storyboard in Resources */,
+				3867D41C25D2373C0018780F /* lamp_off.png in Resources */,
 				3867D40825D233640018780F /* Assets.xcassets in Resources */,
 				3867D40625D233630018780F /* Main.storyboard in Resources */,
 			);
@@ -137,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3867D41425D236AF0018780F /* EditViewController.swift in Sources */,
 				3867D40325D233630018780F /* ViewController.swift in Sources */,
 				3867D3FF25D233630018780F /* AppDelegate.swift in Sources */,
 				3867D40125D233630018780F /* SceneDelegate.swift in Sources */,
