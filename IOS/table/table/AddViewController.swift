@@ -9,21 +9,19 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var txtAddItem: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnAddItem(_ sender: UIButton) {
+        // 아이템즈에 텍스트 필드 값을 추가한다.
+        items.append(txtAddItem.text!)
+        itemsImageFile.append("clock.png")
+        txtAddItem.text = ""
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

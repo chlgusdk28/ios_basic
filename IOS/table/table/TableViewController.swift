@@ -21,6 +21,9 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Edit 버튼을 만들고 삭제 기능 추가하기, 왼쪽으로 배치
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -57,6 +60,11 @@ class TableViewController: UITableViewController {
     }
     
 
+    // 테이블 뷰에 추가된 내용 불러들이기
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tvListView.reloadData()
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -65,24 +73,45 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            items.remove(at: (indexPath as NSIndexPath).row)
+            itemsImageFile.remove(at: (indexPath as NSIndexPath).row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
-    /*
+    // delete를 삭제로 보이게 하기
+    
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
+    }
+    
+    
+    
+
+    
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        //이동할 아이템의 위치
+        let itemToMove = items[(fromIndexPath as NSIndexPath).row]
+        // 이동할 이미지의 위치
+        let itemImageToMove = itemsImageFile[(fromIndexPath as NSIndexPath).row]
+        // 이동할 아이템을 삭제
+        items.remove(at: (fromIndexPath as NSIndexPath).row)
+        // 이동할 이미지 삭제
+        itemsImageFile.remove(at: (fromIndexPath as NSIndexPath).row)
+        // 이미지 삽입
+        items.insert(itemToMove, at: (to as NSIndexPath).row)
+        itemsImageFile.insert(itemImageToMove, at: (to as NSIndexPath).row)
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -92,14 +121,15 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "sgDetail"{
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tvListView.indexPath(for: cell)
+            let detailView = segue.destination as! DetailViewController
+            detailView.receiveItem = items[(indexPath! as NSIndexPath).row]
+        }
     }
-    */
-
 }
