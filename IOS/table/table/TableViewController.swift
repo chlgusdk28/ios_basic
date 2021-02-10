@@ -129,7 +129,8 @@ class TableViewController: UITableViewController {
             let cell = sender as! UITableViewCell
             let indexPath = self.tvListView.indexPath(for: cell)
             let detailView = segue.destination as! DetailViewController
-            detailView.receiveItem = items[(indexPath! as NSIndexPath).row]
+            //detailView.receiveItem = items[(indexPath! as NSIndexPath).row]
+            detailView.receiveItems(items[(indexPath! as NSIndexPath).row])
         }
     }
 }

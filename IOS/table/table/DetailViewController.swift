@@ -18,6 +18,10 @@ class DetailViewController: UIViewController {
         lblItem.text = receiveItem
     }
     
+    func receiveItems(_ item: String){
+            receiveItem = item
+        }
+    
 
     /*
     // MARK: - Navigation
