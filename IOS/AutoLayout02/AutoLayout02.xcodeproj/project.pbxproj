@@ -13,6 +13,7 @@
 		38BAABA025DB899800F3276D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BAAB9E25DB899800F3276D /* Main.storyboard */; };
 		38BAABA225DB899900F3276D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38BAABA125DB899900F3276D /* Assets.xcassets */; };
 		38BAABA525DB899900F3276D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38BAABA325DB899900F3276D /* LaunchScreen.storyboard */; };
+		38BAABAF25DB8BEA00F3276D /* w1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38BAABAE25DB8BEA00F3276D /* w1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		38BAABA125DB899900F3276D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38BAABA425DB899900F3276D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38BAABA625DB899900F3276D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BAABAE25DB8BEA00F3276D /* w1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = w1.jpg; path = ../../../Reference/w1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		38BAAB9725DB899800F3276D /* AutoLayout02 */ = {
 			isa = PBXGroup;
 			children = (
+				38BAABAE25DB8BEA00F3276D /* w1.jpg */,
 				38BAAB9825DB899800F3276D /* AppDelegate.swift */,
 				38BAAB9A25DB899800F3276D /* SceneDelegate.swift */,
 				38BAAB9C25DB899800F3276D /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BAABA525DB899900F3276D /* LaunchScreen.storyboard in Resources */,
+				38BAABAF25DB8BEA00F3276D /* w1.jpg in Resources */,
 				38BAABA225DB899900F3276D /* Assets.xcassets in Resources */,
 				38BAABA025DB899800F3276D /* Main.storyboard in Resources */,
 			);
@@ -295,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftlec.AutoLayout02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftlec.AutoLayout02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
