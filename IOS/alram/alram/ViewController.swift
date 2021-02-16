@@ -16,14 +16,14 @@ class ViewController: UIViewController {
     let timeSelector: Selector = #selector(ViewController.updateTime)
  
     let interval = 1.0
-    let interval2 = 60.0
+    let interval2 = 86400.0
     
     var isClickConfirm = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 86400.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
         
         
         

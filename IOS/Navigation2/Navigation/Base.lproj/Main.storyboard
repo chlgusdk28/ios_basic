@@ -24,9 +24,15 @@
                                     <segue destination="zmA-5Y-wif" kind="show" identifier="editButton" id="nzo-Bl-vuB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="massage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5du-al-cft">
-                                <rect key="frame" x="25" y="194" width="102" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="massage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5du-al-cft">
+                                <rect key="frame" x="38" y="188" width="102" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="48" id="EMs-ge-Lr1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Vcg-8J-4Su"/>
+                                    <constraint firstAttribute="width" constant="102" id="X0a-Ah-DHr"/>
+                                    <constraint firstAttribute="height" constant="49" id="Xx4-nX-5Tb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nPS-Ly-Uq2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,6 +50,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5du-al-cft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5i8-VY-TaF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5du-al-cft" secondAttribute="trailing" constant="250" id="s8D-L8-oOs"/>
+                            <constraint firstItem="5du-al-cft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="uAW-q9-n8A"/>
+                            <constraint firstItem="5du-al-cft" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="wgg-Dq-thm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="main 화면" id="jSi-1C-0If">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="dqj-bm-Yas">
@@ -69,9 +81,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VU-i3-yCY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VU-i3-yCY">
                                 <rect key="frame" x="16" y="122" width="267" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,9 +95,8 @@
                                     <action selector="btnDone:" destination="zmA-5Y-wif" eventType="touchUpInside" id="zXn-Rr-Xll"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="massage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-1k-djA">
-                                <rect key="frame" x="25" y="180" width="102" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="massage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-1k-djA">
+                                <rect key="frame" x="0.0" y="180" width="390" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,6 +147,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LFg-Mf-klY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ExA-1k-djA" firstAttribute="top" secondItem="9VU-i3-yCY" secondAttribute="bottom" id="4Z5-vm-cIY"/>
+                            <constraint firstItem="ExA-1k-djA" firstAttribute="leading" secondItem="LFg-Mf-klY" secondAttribute="leading" id="OfM-DJ-o2Q"/>
+                            <constraint firstItem="LFg-Mf-klY" firstAttribute="trailing" secondItem="ExA-1k-djA" secondAttribute="trailing" id="exP-LA-ju8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="수정화면" id="Xi6-WE-Pvk"/>
                     <connections>
